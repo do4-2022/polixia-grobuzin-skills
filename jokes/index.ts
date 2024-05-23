@@ -13,13 +13,5 @@ export async function run(req) {
   ]
 
   const joke = listOfJokes[Math.floor(Math.random() * listOfJokes.length)];
-
-  // Return a simple JSON response
-  return {
-    status: 200,
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ message: joke }),
-  };
+  return {status:200,headers: {}, body:{ "message" : joke}}
 }
